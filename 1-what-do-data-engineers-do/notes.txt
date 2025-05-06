@@ -1,0 +1,62 @@
+Responsibilities of a data engineer:
+
+1. Move data between systems
+This represents the main responsibility of a data engineer. It usually involves
+
+  1. Extract: Extracting data from any number of sources. The source can be an external API, cloud storage, databases, static files, etc
+  2. Transform: This step involves transforming the data. Some common transformations are mapping, filtering, enrichment, changing the structure of the data(eg denormalizing data), and aggregating.
+  3. Load: This is the step where the data is loaded into the destination system. The destination system can be a cloud storage file system, data warehouse, and/or cache database, etc.
+
+Common tools/frameworks: Pandas, Spark, Dask, Flink, Beam, Debezium, Kafka, Docker, Kubernetes
+
+2. Manage data warehouse
+More often than not, most of the company’s data lands within the data warehouse. The responsibilities of a data engineer in this context are
+
+  1. Warehouse data modeling: Model the data for analytical queries, which are typically aggregation queries on large tables. Modeling here involves applying appropriate partitions, handling fact and dimension tables, etc.
+  2. Warehouse performance: Make sure the queries are fast and the warehouse can scale as needed.
+  3. Data Quality: Ensuring data quality within the data warehouse.
+
+Common modeling techniques: Kimball modeling, Data Vault, Data Lake
+Common frameworks: Great expectations, dbt for data quality
+Common warehouses: Snowflake, Redshift, Bigquery, Clickhouse, Postgres
+
+3. Schedule, execute, and monitor data pipelines
+Data engineers are also responsible for scheduling the ETL pipelines, making sure they run without any issue, and monitoring them.
+
+  1. Scheduling data pipelines to be run at a certain schedule or in response to some event.
+  2. Executing data pipelines and ensuring that they can scale, have the right permissions, etc.
+  3. Monitoring data pipelines for failures, deadlocks, and long-running tasks.
+  4. Managing metadata such as time of the run, end to end time taken, failure reasons, etc
+
+Common frameworks: Airflow, dbt, Prefect, Dagster, AWS Glue, AWS Lambda, Streaming pipeline using Flink/Spark/Beam
+Common databases: MySQL, Postgres, Elastic search and data warehouses
+Common storage systems: AWS S3, GCP cloud store
+Common monitoring systems: Datadog, Newrelic
+
+4. Serve data to the end-users
+Once you have the data available in your data warehouse, it’s time to serve it to the end-user. The end-user can be analysts, an application, external clients, etc. Depending on the end-user you may have to set up
+
+  1. Data visualization/Dashboard tool: Tool used by humans to analyze the data and create pretty charts that can be shared easily.
+  2. Permissions for the data: If it’s a table, then granting correct permissions to your applications or end-users. If it’s in cloud storage, granting cloud users appropriate permissions, etc.
+  3. Data endpoints(API): Some application/external clients may need API-based access to your data. In such cases, a server to send data via an API endpoint will need to be set up.
+  4. Data dumps for clients: Some clients may require data dumps from your system. In such cases, you will have to set up a data pipeline to facilitate this.
+
+Common tools/languages: Looker, Tableau, Metabase, Superset, role-based permissions(for your system), Python/Scala/Java/Go for API endpoints, pipeline tools for client data dumps
+
+5. Data strategy for the company
+Data engineers are involved in coming up with the data strategy for the company. This involves
+
+  1. Deciding what data to collect, how to collect it, and store it securely.
+  2. Evolving data architecture for custom data needs.
+  3. Educating end users on how to use data effectively.
+  4. Deciding what data(if any) to share with external clients.
+
+Common tools/frameworks: Confluence, google docs, RFC documents, brainstormings, meetings
+
+6. Deploy ML models to production
+Data scientists and analysts develop sophisticated models that closely model the working of a specific business process. When it’s time to deploy these models, data engineers are usually the ones who optimize them to be used in a production environment.
+
+  1. Optimizing training and inference: Setting up a batch/online learning pipelines. Ensuring the model is appropriately sized.
+  2. Setting up monitoring: Setting up monitoring and logging systems for the ML model.
+
+Common frameworks: Seldon core, AWS MLOps
