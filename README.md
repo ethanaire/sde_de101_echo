@@ -1,4 +1,4 @@
-# Start Data Engineering DE 101 Free Course
+# Start Data Engineering DE 101 Course
 
 * [Course details](#course-details)
     * [Basics](#basics)
@@ -6,8 +6,6 @@
     * [Intermediate](#intermediate)
     * [Capstone project](#capstone-project)
     * [Job search and beyond](#job-search-and-beyond)
-* [Prerequisites:](#prerequisites)
-* [Assignments:](#assignments)
 
 ## Course details
 
@@ -38,19 +36,3 @@ This is a self-paced course (**[sign up here](https://www.startdataengineering.c
 ### Job search and beyond
 
 12. How to land a high paying data job and whats next
-
-## Prerequisites
-
-Here is what you will need to do this course: 
-
-1. [GitHub account](https://github.com/)
-2. [Machine (laptop/desktop) with Python installed](https://www.python.org/)
-
-Some lessons will require you to install software as needed.
-
-## Assignments
-
-Each lesson has an assignment. Please create a GitHub repository (name: sde_de101_yourname) and create individual folders for each lesson. Please use the repository you create to share your assignments with me for feedback. 
-
-1. [How to create a GitHub repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
-2. [Sample GitHub repository](https://github.com/josephmachado/sde_de101_josephmachado)
