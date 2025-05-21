@@ -1,0 +1,8 @@
+*.csv
+
+*.tbl
+
+myenv/
+
+tpch.db
+.aider*
